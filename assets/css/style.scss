@@ -1,0 +1,914 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+@mixin centar {
+    width: 80%;
+    margin: 0px auto;
+}
+$trans:0.8s;
+#meni{
+    width: 100%;
+    height: 70px;
+    //background-color: rgba($color: #5c5b5b, $alpha: 0.8);
+    padding-top: 15px;
+    position: fixed;
+    .container{
+        height: 50px;
+        //background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        #logo{
+            width: 15%;
+            height: 80%;
+            //background-color: black;
+            margin: 5px auto;
+            text-align: center;
+            a{
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+                &:hover{color: #706e6e;transition: $trans;}
+            }
+        }
+        #nav-bar{
+            width: 50%;
+            height: 80%;
+            //background-color: black;
+            margin: 5px auto;
+            ul{
+                list-style-type: none;
+                li{
+                    float: left;
+                    margin-left: 55px;
+                    margin-top: 10px;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        &:hover{color: gray; transition: $trans;}
+                    }
+                }
+            }
+        }
+    }
+}
+.boja{
+    background-color: rgba($color: black, $alpha: 0.95);
+    z-index: 111;
+    transition: 8s;
+}
+.container{
+    @include centar;
+}
+#pocetak{
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/pocetak.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    #intro{
+        width: 30%;
+        height: 200px;
+        //border: 1px solid yellow;
+        position: relative;
+        top: 300px;
+        left: 50px;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        p{
+            font-size: 17px;
+            padding: 10px;
+        }
+        .name{
+            font-size: 40px;
+            padding-bottom: 40px;
+            span{
+                color:blue;
+            }
+        }
+        .it-student{
+            background-color: rgba($color: blue, $alpha: 0.2);
+            width: 50%;
+            height: 40px;
+            border-radius: 20px;
+            margin: 0px auto;
+            p{
+                color: blue;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
+#predstavljanje{
+    @include centar;
+    .container{
+        height: 400px;
+        //border: 1px solid black;
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        .desno{
+            width: 35%;
+            height: inherit;
+            border: 5px solid blue;
+            #slika{
+                width: 100%;
+                height: 100%;
+                //background-color: aqua;
+                position: relative;
+                top: 22px;
+                right: 22px;
+                background-image: url(../img/mojaslika.jpg);
+                background-size: cover;
+            }
+        }
+        .levo{
+            width: 50%;
+            height: 427px;
+            //border: 1px solid blue;
+            padding: 5px;
+            .ime{
+                font-size: 50px;
+                color: #706e6e;
+            }
+            .plava{
+                color: blue;
+                margin-top: 20px;
+                font-size: 25px;
+            }
+            .tekst{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                color: #8a8686;
+                line-height: 25px;
+            }
+            .tackica{
+                margin-top: 12px;
+                color: #706e6e;
+                .fa-circle-o{
+                    font-size: 15px;
+                    color: blue;
+                }
+                .bold{
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+            #cv{
+                width: 30%;
+                height: 40px;
+                border: 3px solid blue;
+                border-radius: 6px;
+                margin-top: 25px;
+                text-align: center;
+                p{
+                    margin-top: 10px;
+                    color: blue;
+                }
+            }
+        }
+    }
+}
+.fa-circle-dashed{color: blue;}
+#skills{
+    @include centar;
+    margin-top: 120px;
+    .container{
+        height: 400px;
+        text-align: center;
+        //border: 1px solid black;
+        h2{
+            color: black;
+            font-size: 45px;
+        }
+        .skills-bar{
+            width: 100%;
+            height: 80%;
+            //border: 1px solid blue;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .skills-bar-tabla{
+                width: 45%;
+                height: 100%;
+                //border: 1px solid black;
+                .skil{
+                    text-align: left;
+                    width: 100%;
+                    height: 20%;
+                    margin-top: 15px;
+                    //border: 1px solid blue;
+                    .sirina{
+                        width: 100%;
+                        height: 20px;
+                        background-color: #a0a0a0;
+                        //border: 2px solid blue;
+                        border-radius: 20px;
+                        margin-top: 15px;
+                        .w{
+                            background-color: blue;
+                            text-align: center;
+                            border-radius: 20px;
+                            color: white;
+                            height: inherit;
+                        }
+                        .w-86{
+                            width: 86%;
+                        }
+                        .w-70{
+                            width: 70%;
+                        }
+                        .w-90{
+                            width: 90%;
+                        }
+                        .w-75{
+                            width: 75%;
+                        }
+                        .w-99{
+                            width: 99%;
+                        }
+                        .w-81{
+                            width: 81%;
+                        }
+                        .w-95{
+                            width: 95%;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+#edu-exp{
+    @include centar;
+    margin-top: 150px;
+    .container{
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        //border: 1px solid black;
+        .edu-exp-div{
+            width: 48%;
+            height: inherit;
+            //border: 1px solid black;
+            h3{
+                font-size: 30px;
+                font-weight: lighter;
+            }
+            .blok{
+                width: 100%;
+                height: 35%;
+                //border: 1px solid blue;
+                margin-top: 25px;
+                display: flex;
+                justify-content: space-between;
+                .line{
+                    width: 10%;
+                    height: 100%;
+                    //border: 1px solid black;
+                    .krug{
+                        margin: 0px auto;
+                        width: 20px;
+                        height: 10%;
+                        background-color: #706e6e;
+                        border-radius: 50px;
+                    }
+                    .active{
+                        background-color: blue;
+                    }
+                    .line-display{
+                        margin: 0px auto;
+                        width: 2px;
+                        height: 90%;
+                        background-color: #a0a0a0;
+                    }
+                }
+                .details{
+                    width: 88%;
+                    height: 100%;
+                    //border: 1px solid black;
+                    .godine, .plavo{
+                        width: 40%;
+                        height: 20%;
+                        margin-bottom: 10px;
+                        border-radius: 70px 0px 150px 70px;
+                        text-align: center;
+                        color: white;
+                        p{
+                            position: relative;
+                            top: 10px;
+                            font-size: 18px;
+                        }
+                    }
+                    .godine{background-color: #706e6e;}
+                    .plavo{background-color: blue;}
+                    .details-text{
+                        width: 100%;
+                        height: 70%;
+                        background-color: #f2f2f2;
+                        h4{
+                            padding-top: 10px;
+                            margin-left: 20px;
+                            font-size: 25px;
+                            font-weight: lighter;
+                        }
+                        .naslov{
+                            color: blue;
+                            margin-top: 10px;
+                            margin-left: 20px;
+                        }
+                        .p-text{
+                            color: #706e6e;
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+#services{
+    @include centar;
+    margin-top: 100px;
+    .container{
+        height: 400px;
+        //border: 1px solid blue;
+        text-align: center;
+        .small-service{
+            width: 12%;
+            height: 35px;
+            background-color: rgba($color: blue, $alpha: 0.2);
+            margin: 0px auto;
+            border-radius:20px;
+            text-align: center;
+            margin-bottom: 20px;
+            p{
+                color: blue;
+                position: relative;
+                top: 7px;
+            }
+        }
+        h2{
+            font-size: 45px;
+            font-weight: lighter;
+            color: #706e6e;
+            margin-bottom: 20px;
+        }
+        .services-all{
+            width: 100%;
+            height: 270px;
+            //border: 1px solid blue;
+            display: flex;
+            justify-content: space-evenly;
+            .service-block{
+                width: 23%;
+                height: 100%;
+                //border: 1px solid blue;
+            }
+            .gore, .dole{
+                width: 100%;
+                height: 49%;
+                //border: 1px solid black;
+            }
+            .gore{
+                .ikonica{
+                    width: 50%;
+                    height: 80%;
+                    margin: 10px auto;
+                    background-color: #f2f2f2;
+                    border-radius: 500px;
+                    i{
+                        font-size: 40px;
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .dole{
+                h4{
+                    color: blue;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    font-weight: lighter;
+                }
+                p{
+                    color: #706e6e;
+                }
+            }
+        }
+    }
+}
+#projects{
+    @include centar;
+    margin-top: 200px;
+    .container{
+        height: 450px;
+        //border: 1px solid blue;
+        text-align: center;
+        h2{
+            font-weight: lighter;
+            font-size: 40px;
+        }
+        .drzac{
+            width: 100%;
+            height: 350px;
+            //border: 1px solid black;
+            margin-top: 35px;
+            display: flex;
+            justify-content: space-evenly;
+            .my-project{
+                width: 30%;
+                height: 70%;
+                //border: 1px solid #706e6e;
+                margin-top: 40px;
+                border-radius: 30px;
+                .pozadi{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 28px;
+                    a{
+                        display: none;
+                        color: white;
+                        text-decoration: none;
+                        position: relative;
+                        top: 80px;
+                        &:hover{color: blue;transition: $trans;}
+                    }
+                    &:hover{
+                        background-color: rgba($color: gray, $alpha: 0.8);
+                        a{
+                            display: block;
+                        }
+                        transition: $trans;
+                    }
+                }
+            }
+            .srbi{
+                background-image: url(../img/srbi.png);
+                background-size: cover;
+            }
+            .portfolio{
+                background-image: url(../img/portfolio.png);
+                background-size: cover;
+            }
+            .fitness{
+                background-image: url(../img/fitness.png);
+                background-size: cover;
+            }
+        }
+    }
+}
+#freelance{
+    width: 99.5%;
+    height: 400px;
+    margin: 0px auto;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 150px;
+    .freelance-pozadina{
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: gray, $alpha: 0.8);
+        text-align: center;
+        .polje-text{
+            width: 60%;
+            height: 300px;
+            //border: 1px solid black;
+            margin: 0px auto;
+            position: relative;
+            top: 60px;
+            h2{
+                font-weight: lighter;
+                font-size: 50px;
+                span{
+                    color: blue;
+                }
+            }
+            .polje-text-opis{
+                //border: 1px solid black;
+                margin-top: 30px;
+                p{
+                line-height: 25px;
+                font-size: 20px;
+                color: #303030;
+                }
+            }
+            .polje-kontakt{
+                width: 15%;
+                height: 45px;
+                background-color: blue;
+                border-radius: 100px;
+                margin: 80px auto;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    position: relative;
+                    top: 10px;
+                    font-size: 20px;
+                }
+                &:hover{
+                    background-color: white;
+                    a{
+                        color: blue;
+                    }
+                    transition: $trans;
+                }
+            }
+        }
+        
+    }
+}
+#contact{
+    @include centar;
+    margin-top: 150px;
+    .container{
+        height: 550px;
+        //border: 1px solid black;
+        text-align: center;
+        h2{
+            font-weight: lighter;
+            font-size: 40px;
+        }
+        .contact-form{
+            width: 50%;
+            height: 450px;
+            //border: 1px solid blue;
+            margin: 50px auto;
+            .text{
+                width: 100%;
+                border: 4px solid #706e6e;
+                height: 50px;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+            #textarea{
+                width: 100%;
+                border: 4px solid #706e6e;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+            input[type=submit]{
+                margin-top: 20px;
+                width: 25%;
+                height: 40px;
+                border-radius: 100px;
+                border: none;
+                background-color: blue;
+                color: white;
+                font-size: 17px;
+                &:hover{
+                    background-color: #303030;
+                    transition: $trans;
+                }
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    color: white;
+    .container{
+        height: 190px;
+        //border: 1px solid #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        .social{
+            width: 40%;
+            height: 80%;
+            //border: 1px solid yellow;
+            margin-top: 30px;
+            a{
+                color: white;
+                //margin-bottom: 10px;
+                font-size: 17px;
+                line-height: 30px;
+                &:hover{color: #706e6e;transition: $trans;}
+            }
+        }
+        .copyright{
+            width: 20%;
+            height: 20%;
+            //border: 1px solid yellow;
+            margin-top: 80px;
+        }
+    }
+}
+
+//RESPONSIVE DESIGN
+
+@media only screen and (max-width: 1025px){
+    #meni{
+        .container{
+            #nav-bar{
+                ul{
+                    li{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #predstavljanje{
+        .container{
+            .levo{
+                .plava{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    #edu-exp{
+        .container{
+            .edu-exp-div{
+                .blok{
+                    .details{
+                        .plavo{
+                            p{font-size: 14px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #edu-exp .container .edu-exp-div .blok .details .details-text .p-text{
+        margin-top: 5px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-kontakt a{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 770px){
+    #meni .container #nav-bar ul li a{
+        font-size: 14px;
+    }
+    #pocetak #intro .it-student p{
+        font-size: 15px;
+    }
+    #predstavljanje .container .levo .ime{
+        font-size: 40px;
+    }
+    #predstavljanje .container .levo .plava{
+        font-size: 16px;
+    }
+    #predstavljanje .container .levo .tekst{
+        font-size: 15px;
+    }
+    #predstavljanje .container .levo #cv{
+        width: 40%;
+    }
+    #edu-exp .container .edu-exp-div .blok .details .plavo p{
+        top: 5px;
+    }
+    #edu-exp .container .edu-exp-div .blok .details .godine p{
+        font-size: 14px;
+    }
+    #edu-exp .container .edu-exp-div .blok .details .details-text h4{
+        font-size: 15px;
+    }
+    #edu-exp .container .edu-exp-div .blok .details .details-text .p-text{
+        font-size: 14px;
+    }
+    #services{
+        margin-top: 0px;
+    }
+    #services .container{
+        //border: 1px solid black;
+        height: 600px;
+    }
+    #services .container .services-all{
+        height: 540px;
+        //height: 35%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #services .container .services-all .service-block{
+        width: 45%;
+        height: 30%;
+    }
+    #services .container .services-all .gore .ikonica i{
+        margin-top: 10px;
+    }
+    #projects{
+        margin-top: 50px;
+        .container{
+            height: 650px;
+        }
+    }
+    #projects .container .drzac{
+        display: flex;
+        flex-wrap: wrap;
+        height: 550px;
+    }
+    #projects .container .drzac .my-project{
+        width: 45%;
+        height: 40%;
+    }
+    #freelance .freelance-pozadina .polje-text h2{
+        font-size: 35px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-kontakt{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 427px){
+    #meni .container #logo a{
+        font-size: 15px;
+    }
+    #meni .container #nav-bar{
+        width: 60%;
+    }
+    #meni .container #nav-bar ul li{
+        margin-top: 0px;
+        margin-left: 5px;
+        a{
+            font-size: 12px;
+        }
+    }
+    #pocetak #intro .name{
+        font-size: 30px;
+    }
+    #pocetak #intro .it-student{
+        width: 70%;
+        height: 60px;
+    }
+    #predstavljanje .container{
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        .desno, .levo{
+            height: 48%;
+            width: 100%;
+        }
+        .levo{
+            margin-top: 30px;
+        }
+    }
+    #skills .container{
+        height: 800px;
+    }
+    #skills .container .skills-bar{
+        display: flex;
+        flex-wrap: wrap;
+        .skills-bar-tabla{
+            width: 100%;
+            height: 48%;
+        }
+    }
+    #edu-exp .container .edu-exp-div h3{
+        font-size: 20px;
+    
+    }
+    #edu-exp{
+        margin-top: 0px;
+    }
+    #edu-exp .container{
+        display: flex;
+        flex-wrap: wrap;
+        height: 1000px;
+        //border: 1px solid black;
+        .edu-exp-div{
+            width: 100%;
+            height: 60%;
+        }
+    }
+    #edu-exp .container .edu-exp-div .blok .details .plavo{
+        width: 44%;
+    }
+    #services .container{
+        //border: 1px solid black;
+        height: 1000px;
+    }
+    #services .container .services-all .service-block{
+        width: 100%;
+        height: 30%;
+        //border: 1px solid blue;
+        margin-top: 30px;
+    }
+    #services .container h2{
+        font-size: 35px;
+    }
+    #services .container .small-service{
+        width: 22%;
+    }
+    #projects .container{
+        //border: 1px solid black;
+        height: 800px;
+    }
+    #projects .container .drzac .my-project{
+        width: 100%;
+        height: 33%;
+    }
+    #freelance .freelance-pozadina .polje-text h2{
+        font-size: 30px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-text-opis p{
+        line-height: 20px;
+        font-size: 15px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-kontakt{
+        width:32%;
+    }
+    #contact .container .contact-form{
+        width: 80%;
+    }
+    #contact .container .contact-form .text{
+        height: 40px;
+        font-size: 15px;
+    }
+    #contact .container .contact-form #textarea{
+        font-size: 15px;
+    }
+    #contact .container .contact-form input[type=submit]{
+        width: 30%;
+    }
+    footer .container .social a{
+        font-size: 15px;
+    }
+    footer .container .copyright{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 377px){
+    #meni .container #logo a{
+        font-size: 13px;
+    }
+    #meni .container #nav-bar{
+        width: 68%;
+    }
+    #predstavljanje .container .levo #cv p{
+        font-size: 14px;
+    }
+    #edu-exp .container .edu-exp-div .blok .details .plavo, #edu-exp .container .edu-exp-div .blok .details .godine{
+        width: 50%;
+    }
+    #services .container .small-service{
+        width: 27%;
+    }
+    #services .container .services-all .service-block{
+        margin-top: 33px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-kontakt{
+        width: 37%;
+        height: 40px;
+    }
+    footer .container .copyright{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 322px){
+    #meni .container #logo a{
+        font-size: 11px;
+    }
+    #meni .container #nav-bar ul li a{
+        font-size: 10px;
+    }
+    #pocetak #intro .it-student{
+        width: 75%;
+    }
+    #predstavljanje .container .levo .ime{
+        font-size: 35px;
+    }
+    #predstavljanje .container .levo .tekst{
+        line-height: 20px;
+    }
+    #predstavljanje .container .levo .tackica{
+        font-size: 15px;
+    }
+    #predstavljanje .container .levo #cv{
+        width: 47%;
+    }
+    #projects .container h2{
+        font-size: 35px;
+    }
+    #freelance .freelance-pozadina .polje-text h2{
+        font-size: 25px;
+    }
+    #freelance .freelance-pozadina .polje-text .polje-kontakt{
+        width: 43%;
+    }
+    #contact .container .contact-form input[type=submit]{
+        width: 34%;
+    }
+    footer .container .social a{
+        font-size: 12px;
+    }
+    footer .container .copyright{
+        font-size: 11px;
+    }
+    #services .container h2{
+        font-size: 30px;
+    }
+}
