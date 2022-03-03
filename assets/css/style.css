@@ -211,9 +211,17 @@ html {
   text-align: center;
 }
 
-#predstavljanje .container .levo #cv p {
-  margin-top: 10px;
+#predstavljanje .container .levo #cv a {
   color: blue;
+  text-decoration: none;
+  position: relative;
+  top: 10px;
+}
+
+#predstavljanje .container .levo #cv a:hover {
+  color: #303030;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .fa-circle-dashed {
@@ -762,6 +770,37 @@ footer .container .copyright {
   }
 }
 
+#ikonice {
+  width: 100%;
+  height: 40px;
+  background-color: #303030;
+}
+
+#ikonice .ikonice-centar {
+  margin: 0px auto;
+  width: 20%;
+  height: 30px;
+  position: relative;
+  top: 8px;
+  text-align: center;
+}
+
+#ikonice .ikonice-centar a {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#ikonice .ikonice-centar a i {
+  font-size: 20px;
+}
+
+#ikonice .ikonice-centar a:hover {
+  color: blue;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
 @media only screen and (max-width: 770px) {
   #meni .container #nav-bar ul li a {
     font-size: 14px;
@@ -961,6 +1000,9 @@ footer .container .copyright {
   footer .container .copyright {
     font-size: 15px;
   }
+  #ikonice .ikonice-centar {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width: 377px) {
@@ -970,7 +1012,7 @@ footer .container .copyright {
   #meni .container #nav-bar {
     width: 68%;
   }
-  #predstavljanje .container .levo #cv p {
+  #predstavljanje .container .levo #cv a {
     font-size: 14px;
   }
   #edu-exp .container .edu-exp-div .blok .details .plavo, #edu-exp .container .edu-exp-div .blok .details .godine {
@@ -1033,6 +1075,9 @@ footer .container .copyright {
   }
   #services .container h2 {
     font-size: 30px;
+  }
+  #ikonice .ikonice-centar {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -168,9 +168,12 @@ $trans:0.8s;
                 border-radius: 6px;
                 margin-top: 25px;
                 text-align: center;
-                p{
-                    margin-top: 10px;
+                a{
                     color: blue;
+                    text-decoration: none;
+                    position: relative;
+                    top: 10px;
+                    &:hover{color: #303030; transition: $trans;}
                 }
             }
         }
@@ -649,6 +652,29 @@ footer{
         font-size: 15px;
     }
 }
+#ikonice{
+    width: 100%;
+    height: 40px;
+    background-color:#303030;
+    .ikonice-centar{
+        margin: 0px auto;
+        width: 20%;
+        height: 30px;
+        //border: 1px solid yellow;
+        position: relative;
+        top: 8px;
+        text-align: center;
+        a{
+            color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+            i{
+            font-size: 20px;
+            }
+            &:hover{color: blue; transition: $trans;}
+        }
+    }
+}
 @media only screen and (max-width: 770px){
     #meni .container #nav-bar ul li a{
         font-size: 14px;
@@ -840,6 +866,9 @@ footer{
     footer .container .copyright{
         font-size: 15px;
     }
+    #ikonice .ikonice-centar{
+        width: 50%;
+    }
 }
 @media only screen and (max-width: 377px){
     #meni .container #logo a{
@@ -848,7 +877,7 @@ footer{
     #meni .container #nav-bar{
         width: 68%;
     }
-    #predstavljanje .container .levo #cv p{
+    #predstavljanje .container .levo #cv a{
         font-size: 14px;
     }
     #edu-exp .container .edu-exp-div .blok .details .plavo, #edu-exp .container .edu-exp-div .blok .details .godine{
@@ -910,5 +939,8 @@ footer{
     }
     #services .container h2{
         font-size: 30px;
+    }
+    #ikonice .ikonice-centar{
+        width: 50%;
     }
 }
